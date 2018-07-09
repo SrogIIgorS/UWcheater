@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                Nazwa
+            </th>
+            <th>
+                Data Modyfikacji
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @if (ViewData["DirList"] != null)
+    {
+        @foreach (var item in ViewData["DirList"] as IEnumerable<Dir>)
+    {
+        <tr>
+            <td>
+                
+                <span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span>
+                @Html.ActionLink(item.name, "ListCatalog", "Home", new { fullPath = item.fullpath })
+            </td>
+            <td>
+                @item.modifyDate
+            </td>
+        </tr>
+
+}
+
+        @foreach (var item in ViewData["FileList"] as IEnumerable<FileModel>)
+    {
+        <tr>
+            <td>
+                <span aria-hidden="true" class="glyphicon glyphicon-save-file"></span>
+
+        
+
+                @Html.ActionLink(item.name, "Download", "Home", new { fullPath = item.fullPath, name = item.name })
+
+            </td>
+            <td>
+                @item.modifyDate
+            </td>
+        </tr>
+
+        }
+
+
+        }
+    </tbody>
+</table>

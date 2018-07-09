@@ -1,0 +1,11 @@
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\bin\Debug\netcoreapp2.0\UWcheater.deps.json
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\bin\Debug\netcoreapp2.0\UWcheater.runtimeconfig.json
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\bin\Debug\netcoreapp2.0\UWcheater.runtimeconfig.dev.json
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\bin\Debug\netcoreapp2.0\UWcheater.dll
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\bin\Debug\netcoreapp2.0\UWcheater.pdb
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\obj\Debug\netcoreapp2.0\UWcheater.csprojResolveAssemblyReference.cache
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\obj\Debug\netcoreapp2.0\UWcheater.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\obj\Debug\netcoreapp2.0\UWcheater.AssemblyInfoInputs.cache
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\obj\Debug\netcoreapp2.0\UWcheater.AssemblyInfo.cs
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\obj\Debug\netcoreapp2.0\UWcheater.dll
+C:\Users\Piotr\Documents\Pjatk\Pjatk Semestr 4\APDB\UWcheater\UWcheater\obj\Debug\netcoreapp2.0\UWcheater.pdb
