@@ -3,7 +3,6 @@
 }
 
 
-
 <table class="table table-hover">
     <thead>
         <tr>
@@ -19,13 +18,27 @@
 
     <tbody>
 
+        @if(ViewData["parent"] == null)
+        {
+
+        <tr>
+            <td>
+                <span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"></span>
+                parent
+            </td>
+            <td>
+                -
+            </td>
+        </tr>
+        }
+
         @if (ViewData["DirList"] != null)
     {
         @foreach (var item in ViewData["DirList"] as IEnumerable<Dir>)
     {
         <tr>
             <td>
-                
+
                 <span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span>
                 @Html.ActionLink(item.name, "ListCatalog", "Home", new { fullPath = item.fullpath })
             </td>
@@ -41,9 +54,6 @@
         <tr>
             <td>
                 <span aria-hidden="true" class="glyphicon glyphicon-save-file"></span>
-
-        
-
                 @Html.ActionLink(item.name, "Download", "Home", new { fullPath = item.fullPath, name = item.name })
 
             </td>
@@ -52,9 +62,9 @@
             </td>
         </tr>
 
-        }
+}
 
 
-        }
+}
     </tbody>
 </table>
