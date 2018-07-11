@@ -12,17 +12,17 @@ namespace UWcheater.Controllers
 {
     public class HomeController : Controller
     {
+        string parrentDir = "Files";
+
         [HttpGet]
         public IActionResult Index(string fullPath)
         {
-            if (fullPath != null)
-            {
-                ListCatalog(fullPath);
 
-            }
-            else
+            if (fullPath != null){
+                ListCatalog(fullPath);
+            }else
             {
-                ListCatalog("Files");
+                ListCatalog(parrentDir);
             }
             
                 return View();
@@ -66,6 +66,17 @@ namespace UWcheater.Controllers
 
             }
 
+            var chceckparrent = fullPath.Split(@"\");
+            if (chceckparrent[chceckparrent.Length-1].Equals("Files"))
+            {
+                ViewData["parent"] = null;
+            }
+            else
+            {
+                ViewData["parent"] = Directory.GetParent(fullPath);
+            }
+
+            
 
             ViewData["FileList"] = FileList;
             ViewData["DirList"] = DirList;

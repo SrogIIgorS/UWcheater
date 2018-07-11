@@ -18,13 +18,13 @@
 
     <tbody>
 
-        @if(ViewData["parent"] == null)
+        @if(ViewData["parent"] != null)
         {
 
         <tr>
             <td>
                 <span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"></span>
-                parent
+                @Html.ActionLink("parent", "Index", "Home", new  { fullPath = ViewData["parent"] })
             </td>
             <td>
                 -
@@ -40,7 +40,7 @@
             <td>
 
                 <span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span>
-                @Html.ActionLink(item.name, "ListCatalog", "Home", new { fullPath = item.fullpath })
+                @Html.ActionLink(item.name, "Index", "Home", new { fullPath = item.fullpath })
             </td>
             <td>
                 @item.modifyDate
