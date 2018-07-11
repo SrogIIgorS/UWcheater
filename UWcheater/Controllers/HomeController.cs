@@ -12,48 +12,27 @@ namespace UWcheater.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Index(string fullPath)
         {
-            //var files=Directory.GetFiles("Files");
-            var directories = Directory.GetDirectories("Files");
-
-            var DirList = new List<Dir>();
-             foreach (var path in directories)
+            if (fullPath != null)
             {
-                var temp = path.Split(@"\");
-                DirList.Add(new Dir
-                {
-                    fullpath = path,
-                    name = temp[temp.Length-1],
-                    modifyDate= Directory.GetLastWriteTime(path)
-
-            });
+                ListCatalog(fullPath);
 
             }
-
-            var files = Directory.GetFiles("Files");
-            var FileList = new List<FileModel>();
-            foreach(var path in files)
+            else
             {
-                var temp = path.Split(@"\");
-                FileList.Add(new FileModel
-                {
-                    fullPath = path,
-                    name = temp[temp.Length - 1],
-                    modifyDate= Directory.GetLastWriteTime(path)
-                });
-
+                ListCatalog("Files");
             }
+            
+                return View();
+            
 
-
-            ViewData["FileList"] = FileList;
-            ViewData["DirList"] = DirList;
-            return View();
         }
 
 
 
-        [HttpGet]
+       
         public IActionResult ListCatalog(string fullPath)
         {
             //var files=Directory.GetFiles("Files");
@@ -98,9 +77,6 @@ namespace UWcheater.Controllers
         [HttpGet]
         public FileResult Download(string fullPAth, string name)
         {
-
-           
-
 
                 byte[] fileBytes = System.IO.File.ReadAllBytes(fullPAth);
                 string fileName = name;
